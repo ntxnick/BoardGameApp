@@ -1,3 +1,4 @@
 To run this app use the command:
 
     npx expo start
+
