@@ -1,4 +1,16 @@
-To run this app use the command:
+Pre Requisites for Setting up this app: 
+    1) Ensure you have node.js installed on your device (I'm using version V20.13.1)
+    2) Run the following commands to install expo:
+        
+        npm install -g expo-cli
+
+App Setup: 
+    1) Run the command:
+        
+        npm install
+
+
+To start this app use the command:
 
     npx expo start
 
