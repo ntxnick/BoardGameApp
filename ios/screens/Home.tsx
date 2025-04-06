@@ -5,11 +5,14 @@ import React from "react";
 import { NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from '../../App';
 
+//global styles
+import { globalStyles } from '../styles/global';
+
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>
 
 const Home = ({navigation}: HomeProps) => {
     return(
-        <View style={styles.container}>
+        <View style={globalStyles.container}>
             {/* <text>Home!</text> */}
             <Button
             title='Go to Details'
@@ -22,14 +25,3 @@ const Home = ({navigation}: HomeProps) => {
 }
 
 export default Home
-
-const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    backgroundColor: '#E8EAED',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  items: {
-    padding: 80
-  },});

@@ -7,6 +7,9 @@ import {RootStackParamList} from '../../App';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp} from '@react-navigation/native-stack'
 
+//global styles
+import { globalStyles } from '../styles/global';
+
 type DetailsProps = NativeStackScreenProps<RootStackParamList, 'Details'>
 
 const Details = ({route}: DetailsProps) => {
@@ -15,8 +18,8 @@ const Details = ({route}: DetailsProps) => {
 
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
     return(
-        <View style={styles.container}>
-            <Text>Details!</Text>
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.paragraph}>Details!</Text>
             <Button 
             title='Go to Home'
             onPress={() =>navigation.navigate("Home") } />
@@ -26,14 +29,3 @@ const Details = ({route}: DetailsProps) => {
 }
 
 export default Details
-
-const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    backgroundColor: '#E8EAED',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  items: {
-    padding: 80
-  },});

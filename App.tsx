@@ -10,6 +10,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import Home from './ios/screens/Home'
 import Details from './ios/screens/Details'
 
+//global styles
+import { globalStyles } from './ios/styles/global';
+
 export type RootStackParamList = {
   Home: undefined;
   Details: {productId: string}
@@ -40,15 +43,3 @@ export default function App() {
         </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#E8EAED',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  items: {
-    padding: 80
-  },
-});
